@@ -54,6 +54,13 @@
             color: #fff;
             font-weight: bold;
         }
+        
+        #saveResult {
+            background: #fff9c4;
+            display: block;
+            padding: 20px;
+            font-family: monospace;
+        }
     </style>
 </head>
 <body>
@@ -62,9 +69,12 @@
         <span id="clock"></span>
         <input type="text" id="date" value="May 4, 2012, 5:00 PM EDT" />
     </div>
-    seconds to go: <input type="text" value="259200" id="seconds" />
+    Deadline: <input type="text" value="2015-05-02 12:30" id="deadline" />
     <input type="button" value="run" onclick="run()" />
 
+    <p><input type="button" value="save" onclick="save()"/></p>
+        
+    <code id="saveResult"></code>
 
 <script type="text/javascript">
     var secs = 0;
@@ -75,7 +85,7 @@
             clearInterval(intervalId);
         }
 
-        secs = parseInt(document.getElementById("seconds").value);
+        secs = (new Date($("deadline").value).valueOf() - new Date().valueOf()) / 1000;
         intervalId = setInterval(updateClock, 1000);
 
     }
@@ -83,7 +93,7 @@
 
     function updateClock() {
         if (secs < 0) {
-            document.getElementById("clock").innerHTML = "GO";
+            $("clock").innerHTML = "GO";
             clearInterval(intervalId);
             return;
         }
@@ -94,7 +104,7 @@
             .replace(/MM/g, calcage(secs, 60, 60))
             .replace(/SS/g, calcage(secs, 1, 60));
 
-        document.getElementById("clock").innerHTML = displayStr;
+        $("clock").innerHTML = displayStr;
 
         secs--;
     }
@@ -107,6 +117,18 @@
         }
 
         return s;
+    }
+    
+    function $(id) {
+        return document.getElementById(id);
+    }
+    
+    function save() {
+        $("saveResult").innerHTML = JSON.stringify({
+            topLine: $("campaign").value,
+            bottomLine: $("date").value,
+            deadLine: $("deadline").value
+        });
     }
 
     run();
