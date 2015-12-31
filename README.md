@@ -1,2 +1,1 @@
-# milovanovm.github.io
-хомепага
+# homepage
