@@ -9,7 +9,7 @@ permalink:          /:year/:month/:day/:title.html
 future:             false
 
 # Markdown
-markdown:           rdiscount
+markdown:           kramdown
 
 # Navigation
 nav:

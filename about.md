@@ -13,5 +13,5 @@ Contacts:
 * email: **[hello@milovanov.info](mailto:hello@milovanov.info)**
 * twitter: **[@maxmilovanov](https://twitter.com/maxmilovanov)**
 * skype: **maxmilovanov**
-* github: [MilovanovM](https://github.com/MilovanovM)
-* linkedin: [Profile](https://ru.linkedin.com/in/maxim-milovanov-445686117)
+* github: **[MilovanovM](https://github.com/MilovanovM)**
+* linkedin: **[Maxim Milovanov](https://ru.linkedin.com/in/maxim-milovanov-445686117)**
