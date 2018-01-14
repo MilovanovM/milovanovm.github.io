@@ -3,9 +3,9 @@ title: About
 permalink: /about/
 ---
 
-My name is Maxim Milovanov. I'm a web developer from Voronezh, Russia. I've been working at [ivelum](http://www.ivelum.com/) for 9 years.
+My name is Maxim Milovanov. I'm a web developer from Voronezh, Russia. I've been working at [ivelum](https://ivelum.com/) for 10 years.
 
-My experience covers .NET development (ASP.NET MVC) and front-end development (HTML, CSS, JavaScript).
+My experience covers .NET development (ASP.NET MVC), Python/Django and front-end development (HTML, CSS, JavaScript).
 
 Contacts:
 
