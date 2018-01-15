@@ -40,7 +40,7 @@ title: Apple Watch series 3 vs Fitbit Charge 2
 
 ### Цена
 * **Fitbit Charge**: 9 тыс руб.
-* **Apple Watch**: 22-27 тыс руб. в зависимости от размера
+* **Apple Watch**: 22-27 тыс руб. в зависимости от размера.
 
 Победитель: **Fitbit Charge**
 
