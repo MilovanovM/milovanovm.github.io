@@ -1,32 +1,84 @@
----
-layout: default
----
-<header class="masthead">
-  <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{ site.name }}<span>&#39;s blog</span></a>
-  </h1>
-  <nav class="masthead-nav">
-    {% for nav in site.nav %}
-    <a href="{{ nav.href }}">{{ nav.name }}</a>
-    {% endfor %}
-  </nav>
-</header>
-<div class="content list">
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% else %}
-{% for post in site.posts %}
-  <div class="list-item">
-    <h2 class="list-post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <div class="post-content">
-      {{ post.content | strip_html | truncatewords: 30 }} <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Read more &raquo;</a>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <title>Maxim Milovanov, full-stack development</title>
+    <style>
+        html, body, h1, h2 { margin: 0; padding: 0; }
+        body, input, textarea, button { font-family: 'Bitter', serif; box-sizing: border-box; }
+        header { padding: 20px; }
+        h1, .short-intro { color: #c8c8c8; }
+        h1 { font-size: 48px; }
+        h1 b { color: #000; }
+        .photo { border-radius: 55px; float: left; width: 110px; height: 110px; overflow: hidden; margin-right: 20px; }
+        .photo img { width: 100%; height: 100%; }
+        .lang-panel { padding: 20px; }
+        .lang-panel-js { background: #F5DA55; }
+        .lang-panel-net { background: #7014E8; color:#fff; }
+        .lang-panel-python { background: #0C4B33; color:#fff; }
+        .lang-panel-ux { background: #e8442d; color:#fff; }
+        .lang-panel-db { background: #336791; color:#fff; }
+        .contacts a { display: inline-block; padding: 8px 16px; text-decoration: none; color: #000; border: 2px solid #000; margin-right: 8px; }
+        .contacts a:hover { background: #000; color: #fff; }
+        form { background: #e8e8e8; padding: 20px; }
+        label { display: block; margin: 16px 0; }
+        label input, label textarea { display: block; width: 100%; padding: 8px; font-size: 1.2em; }
+        textarea { height: 10em; }
+        button { padding: 8px 16px; }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="photo"><img src="images/iam.jpg" alt="Maxim"></div>
+            <h1>Hi, there!<br>I'm <b>Maxim</b></h1>
+            <p class="short-intro">A full-stack developer with almost 20-years experience in HTML, CSS, JavaScript, C#/.NET, and Python/Django</p>
+            <p class="contacts">
+                <a href="https://github.com/MilovanovM">GitHub</a>
+                <a href="https://www.linkedin.com/in/maxim-milovanov-445686117/">LinkedIn</a>
+                <a href="https://twitter.com/maxmilovanov">Twitter</a>
+                <a href="#ContactForm">Email</a>
+                <a href="facetime://+79191807620">+79191807620</a>
+            </p>
+        </header>
+        <div class="lang-panel lang-panel-js">
+            <h2>JavaScript</h2>
+            <p>Creating rich client-side apps using the latest ES2019 and ReactJS</p>
+        </div>
+        <div class="lang-panel lang-panel-net">
+            <h2>C#/.NET</h2>
+            <p>From enterprise-level ASP.NET apps to lightweight .NET Core services</p>
+        </div>
+        <div class="lang-panel lang-panel-python">
+            <h2>Python/Django</h2>
+            <p>Containerized apps on Linux stack</p>
+        </div>
+        <div class="lang-panel lang-panel-ux">
+            <h2>UI/UX</h2>
+            <p>Wireframing and rapid prototyping</p>
+        </div>
+        <div class="lang-panel lang-panel-db">
+            <h2>Databases</h2>
+            <p>PostgreSQL, MySQL, Microsoft SQL Server, Amazon Redshift</p>
+        </div>
+        <form action="https://formspree.io/xeqrkljp" method="POST" target="_blank" id="ContactForm">
+            <h2>Nice to meet you</h2>
+            <label>
+                Your email
+                <input type="text" name="_replyto">
+            </label>
+            <label>
+                Your message
+                <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
     </div>
-    <div class="list-post-date">
-      <time>{{ post.date | date_to_string }}</time>
-    </div>
-  </div>
-{% endfor %}
-{% endif %}
-</div>
+</body>
+</html>
