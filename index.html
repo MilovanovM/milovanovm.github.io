@@ -10,7 +10,7 @@
     <title>Maxim Milovanov, full-stack development</title>
     <style>
         html, body, h1, h2 { margin: 0; padding: 0; }
-        body, input, textarea, button { font-family: 'Bitter', serif; box-sizing: border-box; }
+        body { font-family: 'Bitter', serif; box-sizing: border-box; }
         header { padding: 20px; }
         h1, .short-intro { color: #888; }
         h1 { font-size: 48px; }
@@ -25,11 +25,6 @@
         .lang-panel-db { background: #336791; color:#fff; }
         .contacts a { display: inline-block; padding: 8px 16px; text-decoration: none; color: #000; border: 2px solid #000; margin: 0 8px 8px 0; }
         .contacts a:hover { background: #000; color: #fff; }
-        form { background: #e8e8e8; padding: 20px; }
-        label { display: block; margin: 16px 0; }
-        label input, label textarea { display: block; width: 100%; padding: 8px; font-size: 1.2em; }
-        textarea { height: 10em; }
-        button { padding: 8px 16px; font-size: 1.5em; }
     </style>
 </head>
 
@@ -44,7 +39,6 @@
                 <a href="https://www.linkedin.com/in/maxim-milovanov-445686117/">LinkedIn</a>
                 <a href="https://career.habr.com/alemiks">Habr Career</a>
                 <a href="https://twitter.com/maxmilovanov">Twitter</a>
-                <a href="#ContactForm">Email</a>
                 <a href="facetime://+79191807620">+79191807620</a>
             </p>
         </header>
@@ -68,18 +62,6 @@
             <h2>Databases</h2>
             <p>PostgreSQL, MySQL, Microsoft SQL Server, Amazon Redshift</p>
         </div>
-        <form action="https://formspree.io/xeqrkljp" method="POST" target="_blank" id="ContactForm">
-            <h2>Nice to meet you</h2>
-            <label>
-                Your email
-                <input type="text" name="_replyto">
-            </label>
-            <label>
-                Your message
-                <textarea name="message"></textarea>
-            </label>
-            <button type="submit">Send</button>
-        </form>
     </div>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
