@@ -18,12 +18,13 @@
         h1 b { color: #000; }
         .photo { border-radius: 55px; float: left; width: 110px; height: 110px; overflow: hidden; margin-right: 20px; }
         .photo img { width: 100%; height: 100%; }
-        .lang-panel { padding: 20px; }
-        .lang-panel-js { background: #F5DA55; }
-        .lang-panel-net { background: #7014E8; color:#fff; }
-        .lang-panel-python { background: #0C4B33; color:#fff; }
-        .lang-panel-ux { background: #e8442d; color:#fff; }
-        .lang-panel-db { background: #336791; color:#fff; }
+        .skills { list-style: none; margin: 0; padding: 0; }
+        .skills li { padding: 20px; }
+        .skills-fullstack { background: #F5DA55; }
+        .skills-backend { background: #7014E8; color:#fff; }
+        .skills-frontend { background: #0C4B33; color:#fff; }
+        .skills-uxui { background: #e8442d; color:#fff; }
+        .skills-databases { background: #336791; color:#fff; }
         .contacts a { display: inline-block; padding: 8px 16px; text-decoration: none; color: #000; border: 2px solid #000; margin: 0 8px 8px 0; }
         .contacts a:hover { background: #000; color: #fff; }
     </style>
@@ -43,26 +44,30 @@
                 <a href="https://github.com/MilovanovM">GitHub</a>
             </p>
         </header>
-        <div class="lang-panel lang-panel-js">
-            <h2>JavaScript</h2>
-            <p>Creating rich client-side apps using the latest ES2019, TypeScript, and React</p>
-        </div>
-        <div class="lang-panel lang-panel-net">
-            <h2>C# / .NET</h2>
-            <p>From enterprise-level ASP.NET apps to lightweight .NET Core services</p>
-        </div>
-        <div class="lang-panel lang-panel-python">
-            <h2>Python / Django</h2>
-            <p>Containerized apps on Linux stack</p>
-        </div>
-        <div class="lang-panel lang-panel-ux">
-            <h2>UI / UX</h2>
-            <p>Wireframing and rapid prototyping</p>
-        </div>
-        <div class="lang-panel lang-panel-db">
-            <h2>Databases</h2>
-            <p>PostgreSQL, MySQL, Microsoft SQL Server, Amazon Redshift, Google BigQuery</p>
-        </div>
+        <ul class="skills">
+            <li class="skills-fullstack">
+                <h2>Full Stack Development</h2>
+                <p>
+                    Building robust web applications using Python, Django, FastAPI, JavaScript, TypeScript, and React
+                </p>
+            </li>
+            <li class="skills-backend">
+                <h2>Backend Development</h2>
+                <p>Containerized apps on Linux stack using Python/Django/Flask/FastAPI or C#/ASP.NET</p>
+            </li>
+            <li class="skills-frontend">
+                <h2>Frontend Development</h2>
+                <p>Creating rich client-side apps using the latest CSS, JavaScript, TypeScript, and React</p>
+            </li>
+            <li class="skills-uxui">
+                <h2>AI tools</h2>
+                <p>AI-Enhanced Development: Cursor, GitHub Copilot, Augment Code, JetBrains Junie for accelerated coding and debugging</p>
+            </li>
+            <li class="skills-databases">
+                <h2>UI / UX</h2>
+                <p>Wireframing and rapid prototyping</p>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
